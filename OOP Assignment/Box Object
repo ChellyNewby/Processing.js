@@ -1,0 +1,30 @@
+class Castle {
+  float y;
+  
+  
+  
+ Castle(){
+float y = 0.1;  //Constructor
+
+ }
+
+void drawBox(float boxsize){   //draws box
+box(boxsize);
+} 
+
+ void drawCastle(float xpos,float ypos,float zpos){   //sets position
+   translate(xpos,ypos,zpos);
+  rotateY(y);
+
+   
+   }
+
+void changeColor(float r,float b,float g){   //changes color
+  fill(r,b,g);
+}
+  
+  void rotateBox(){   //sets rotate speed 
+  y += .01; 
+  
+  }
+}
