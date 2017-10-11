@@ -1,0 +1,60 @@
+import processing.opengl.*;
+Castle c2;
+Castle c3;   
+Sphere s1;
+Sphere s2;
+Sphere s3;   // Creating two objects 
+Sphere s4;
+
+void setup() {
+  size(600,600,P3D);
+  c3=new Castle();
+  s1= new Sphere();  //sphere 1
+  s2=new Sphere();  //sphere 2
+  s3=new Sphere();
+    s4=new Sphere();
+  smooth();
+}
+
+
+void draw() {
+  lights();
+  strokeWeight(10);
+background(225);
+ 
+  
+
+  
+  c3.drawCastle(200,300,0);  
+  c3.changeColor(225,69,19);
+  c3.drawBox(120);
+ c3.rotateBox();
+  
+
+  
+ 
+  s1.rotateSphere(100,60);
+   s1.setColor();
+  s1.drawSphere();
+  s1.update();
+  
+  
+  s2.rotateSphere(100,40);
+  s2.setColor();
+  s2.drawSphere();
+  s2.update();
+ 
+  
+  s3.rotateSphere(110,30);
+   s3.setColor();
+  s3.drawSphere();
+  s3.update();
+  
+ s4.rotateSphere(100,20);
+   s4.setColor();
+  s4.drawSphere();
+  s4.update();
+ 
+
+  
+}
