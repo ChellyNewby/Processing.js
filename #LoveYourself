@@ -1,0 +1,41 @@
+/* @pjs preload="https://i.pinimg.com/736x/15/5f/f1/155ff1b9c20378b8996cd8ddbe65c4c0--natural-hair-art-black-girls.jpg,http://affinitymagazine.us/wp-content/uploads/2017/03/super-woman.jpg"; */
+
+PImage webimg;
+PImage webimg2;
+
+void setup(){
+  size(500,500);
+  String url= "https://i.pinimg.com/736x/15/5f/f1/155ff1b9c20378b8996cd8ddbe65c4c0--natural-hair-art-black-girls.jpg";
+  String url2= "http://affinitymagazine.us/wp-content/uploads/2017/03/super-woman.jpg";
+
+ webimg= loadImage(url, "jpg");
+  webimg2=loadImage(url2,"png");
+     background(webimg);
+  smooth();
+}
+
+void draw(){
+  stroke(0);
+  translate(mouseX,mouseY);// changes position of shape
+  scale(random(1.2)); //chages scale of shape
+  fill(225,random(225),random(225),120); //changes color of shaoe
+  smooth();
+noStroke();
+
+beginShape();  //draws a heart
+vertex(50, 15);   
+bezierVertex(50, -5, 90, 5, 50, 40); 
+vertex(50, 15); 
+bezierVertex(50, -5, 10, 5, 50, 40); 
+endShape();
+  
+} 
+
+void mousePressed(){     //changes background when mouse pressed
+  background(webimg);
+
+}
+
+void keyPressed(){  //changes background when key pressed
+ background(webimg2);
+}
