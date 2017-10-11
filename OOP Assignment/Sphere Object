@@ -1,0 +1,43 @@
+class Sphere{
+  color sColor;
+  
+
+
+
+Sphere(){  //Constructor
+
+sColor=color(240,230,140);
+
+}
+
+void setColor(){   //sets color
+ fill(sColor);
+}
+  
+  void rotateSphere(float xpos, float ypos){   //sets rotation pattern
+  rotateX(radians(frameCount*2));
+   rotateY(radians(frameCount*2));
+   translate(xpos, ypos); //position
+    
+
+  }
+ void drawSphere(){
+   sphereDetail(15);   //draws sphere
+   sphere(30);
+   
+}
+ 
+   void update(){
+     if (mousePressed){    //changes color when mouse pressed
+       	if (sColor==color(192,192,192)){
+       sColor=color(random(240),random(230),random(140));}
+       else {
+         sColor=color(192,192,192);
+       }
+     }
+   }
+       
+     
+    
+  
+}
